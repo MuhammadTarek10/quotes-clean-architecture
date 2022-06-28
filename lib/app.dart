@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quotes/features/random_quote/presentation/views/quote_view.dart';
+import 'package:quotes/config/routes/app_routes.dart';
+import 'package:quotes/config/themes/app_theme.dart';
 
 class QuotesApp extends StatelessWidget {
   const QuotesApp({Key? key}) : super(key: key);
@@ -7,10 +8,10 @@ class QuotesApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: QuoteView(),
+      theme: AppTheme.getAppTheme(),
+      onGenerateRoute: AppRouteGenerator.onGenerateRoute,
     );
   }
 }
-
