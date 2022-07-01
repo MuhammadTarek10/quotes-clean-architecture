@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:quotes/core/utils/app_colors.dart';
 import 'package:quotes/core/utils/app_strings.dart';
 
@@ -33,6 +34,19 @@ class AppConstants {
           ],
         );
       },
+    );
+  }
+
+  static void showToast({
+    required String message,
+    Color? color,
+    ToastGravity? toastGravity,
+  }) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_LONG,
+      backgroundColor: color ?? AppColors.primaryColor,
+      gravity: toastGravity ?? ToastGravity.BOTTOM,
     );
   }
 }

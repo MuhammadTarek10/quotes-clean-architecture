@@ -5,4 +5,6 @@ class AppColors {
   static const Color hintColor = Colors.grey;
   static const Color buttonColor = Colors.black;
   static const Color scaffoldBackgroundColor = Colors.white;
+
+  static const Color quoteColor = Color(0xFF202053);
 }

@@ -16,6 +16,28 @@ class AppTheme {
           color: AppColors.buttonColor,
           fontWeight: FontWeight.w500,
         ),
+        headline2: TextStyle(
+          height: 1.3,
+          fontSize: 22,
+          color: AppColors.quoteColor,
+          fontWeight: FontWeight.bold,
+        ),
+        headline4: TextStyle(
+          height: 1.3,
+          fontSize: 18,
+          color: AppColors.buttonColor,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      appBarTheme: const AppBarTheme(
+        centerTitle: true,
+        color: Colors.transparent,
+        elevation: 0,
+        titleTextStyle: TextStyle(
+          color: AppColors.buttonColor,
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+        ),
       ),
     );
   }
