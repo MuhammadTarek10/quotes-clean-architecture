@@ -2,7 +2,7 @@ import 'package:quotes/features/random_quote/domain/entities/quote.dart';
 
 class QuoteModel extends Quote {
   const QuoteModel(
-      {required String id,
+      {required int id,
       required String author,
       required String content,
       required String permalink})
@@ -16,7 +16,7 @@ class QuoteModel extends Quote {
   factory QuoteModel.fromJson(Map<String, dynamic> json) => QuoteModel(
         author: json["author"],
         id: json["id"],
-        content: json["content"],
+        content: json["quote"],
         permalink: json["permalink"],
       );
 

@@ -8,3 +8,31 @@ abstract class RandomQuoteState extends Equatable {
 }
 
 class RandomQuoteInitial extends RandomQuoteState {}
+
+class RandomQuoteLoading extends RandomQuoteState {}
+
+class RandomQuoteLoaded extends RandomQuoteState {
+  final Quote quote;
+
+  const RandomQuoteLoaded({required this.quote});
+
+  @override
+  List<Object> get props => [quote];
+}
+
+class RandomQuoteError extends RandomQuoteState {
+  final String message;
+
+  const RandomQuoteError({required this.message});
+
+  @override
+  List<Object> get props => [message];
+}
+
+class RandomQuoteEmpty extends RandomQuoteState {}
+
+class RandomQuoteNotFound extends RandomQuoteState {}
+
+class RandomQuoteNotAvailable extends RandomQuoteState {}
+
+class RandomQuoteNotAuthorized extends RandomQuoteState {}
